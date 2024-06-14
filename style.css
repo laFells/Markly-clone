@@ -7,7 +7,15 @@
     scroll-behavior: smooth;
     font-family: "Roboto", sans-serif;
     font-weight: 400;
+}
+body{
+    overflow-x: hidden;
+}
 
+body::-webkit-scrollbar{
+    display: none;
+    align-self: baseline;
+    min-inline-size: 50%;
 }
 
 header {
@@ -160,11 +168,16 @@ nav .download{
     font-weight: 100;
     gap: 40px;
     margin-top: -90px;
-    margin-left: -270px;
 }
+
+.container-bridge img{
+    transform: translateX(-30%);
+}
+
 
 .text-bridge{
     margin-top: 15px;
+    transform: translateX(-50%);
 }
 
 .text-bridge h1{
@@ -183,7 +196,7 @@ nav .download{
 }
 
 .text-bridge .p2 {
-    width: 65%;
+    max-width: 70%;
     font-size: 16px;
     font-weight: 400;
     line-height: 2;
@@ -196,38 +209,40 @@ nav .download{
 #realtime{
     display: flex;
     justify-content: center;
+    align-items: center;
     min-height: 100vh;
     font-weight: 100;
-    margin-top: 100px;
-    overflow-x: hidden;
     gap: 40px;
+    margin-top: 90px;
 }
 
-.image-realtime img{
-    transform: translateX(30%);
+.container-realtime{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.text-realtime {
-    transform: translateX(65%);
+.container-realtime img{
+    width: 100%;
+    transform: translateX(50%);
 }
 
-.text-realtime .p-realtime{
-    margin-top: 30px;
-    font-size: 16px;
-    line-height: 1.5;
+.text-realtime{
+    transform: translateX(80%);
+    margin-bottom: 25%;
 }
 
 .text-realtime h1{
+    width: 70%;
     font-size: 40px;
-    margin-top: 25px;
     font-weight: 300;
     line-height: 1.2;
 }
 
-.text-realtime p {
-    font-weight: 400;
+.text-realtime p{
+    width: 80%;
+    margin-top: 10px;
     line-height: 1.5;
-    text-align: justify;
 }
 
 /* build */
@@ -239,13 +254,20 @@ nav .download{
     font-weight: 100;
     margin-top: 100px;
     gap: 40px;
-    margin-left: -270px;
+}
+
+.container-build img{
+    transform: translateX(-30%);
+}
+
+.text-build{
+    transform: translateX(-50%);
 }
 
 .text-build h1{
     width: 70%;
     font-size: 40px;
-    margin-top: 25px;
+    margin-top: 20px;
     font-weight: 300;
     line-height: 1.2;
 }
@@ -548,6 +570,8 @@ footer{
         align-items: center;
     }
 
+
+
     .btn-free-download{
         display: flex;
         padding: 10px 15px;
@@ -560,8 +584,7 @@ footer{
     #brands{
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        
     }
 
     .image-brands{
@@ -578,25 +601,127 @@ footer{
         font-weight: 300;
     }
 
+
+   
+
+
+
     #bridge{
         display: flex;
         flex-direction: column;
+    }
+
+    .container-bridge{
+        width: 100%;
+        transform: translateX(30%);
+        display: flex;
         align-items: center;
     }
 
     .container-bridge img{
-        width: 60%;
-        margin-left: 270px;
+        width: 100%;
         margin-top: 100px;
     }
 
     .text-bridge{
+        transform: translateX(20%);
+    }
+
+
+    
+    #realtime{
+        display: flex;
+        flex-direction: column;
+    
+    }
+
+    .container-realtime{
+        width: 100%;
+        transform: translateX(-50%);
         display: flex;
         flex-wrap: wrap;
-        margin-left: 270px;
         align-items: center;
-        text-align: ;
+    }
+
+    .container-realtime img{
+        width: 100%;
+        
+    }
+
+    .text-realtime{
+        margin-top: 100px;
+        transform: translateX(70%);
+    }
+   
+    
+
+
+    #build{
+        display: flex;
+        flex-direction: column;
+        ;
+    }
+
+    .container-build{
+        width: 100%;
+        transform: translateX(30%);
+        display: flex;
+        align-items: center;
+    }
+
+    .container-build img{
+        width: 100%;
+        margin-top: 100px;
+    }
+
+    .text-build{
+        transform: translateX(20%);
+    }
+
+    #made{
+        min-height: 100%;
+        display: flex;
+        margin-bottom: 50px;
+    }
+
+    .container-made h2{
+        font-size: 30px;
     }
     
+    .container-made-image{
+        gap: 10px;
+    }
+
+    /* get */
+
+    .container-get{
+        width: 70%;
+        line-height: 1.5;
+        font-size: 18px;
+    }
+
+    /* footer */
+
+    footer{
+        height: 120vh;
+    }
+   
+
+    .container-footer{
+       display: grid;
+       grid-template-columns: 1fr 1fr;
+       gap: 30px;
+       margin-top: 150px;
+       position: relative;
+    }
+
+    .logo-footer{
+        margin-top: 30px;
+       text-align: center;
+    }
+
+    .logo-footer p{
+        margin-bottom: 100px;
+    }
 
 }
